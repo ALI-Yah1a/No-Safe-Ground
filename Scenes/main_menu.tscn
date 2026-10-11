@@ -20,7 +20,7 @@
 shader = ExtResource("1_48xlc")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
-bg_color = Color(0.105882354, 0.039215688, 0.05882353, 0.74509805)
+bg_color = Color(0.0627451, 0.050980393, 0.07058824, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
@@ -2053,6 +2053,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="Buttons/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Buttons/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Buttons/LeaveButton" to="." method="_on_leave_button_pressed"]
 [connection signal="pressed" from="Buttons/ExpandButton" to="." method="_on_expand_button_pressed"]
 [connection signal="pressed" from="Buttons/FoldButton" to="." method="_on_fold_button_pressed"]
