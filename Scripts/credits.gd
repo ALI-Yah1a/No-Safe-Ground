@@ -12,6 +12,9 @@ func _process(delta: float) -> void:
 
 
 func _on_buttonrdb_pressed() -> void:
+	$Panel.show()
+	$Panel2.show()
+	$Panel3.show()
 	$AnimationPlayer.play("credits animation")
 
 

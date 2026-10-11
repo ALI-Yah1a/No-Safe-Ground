@@ -2054,6 +2054,7 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="Buttons/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Buttons/GuideButton" to="." method="_on_guide_button_pressed"]
 [connection signal="pressed" from="Buttons/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Buttons/LeaveButton" to="." method="_on_leave_button_pressed"]
 [connection signal="pressed" from="Buttons/ExpandButton" to="." method="_on_expand_button_pressed"]
