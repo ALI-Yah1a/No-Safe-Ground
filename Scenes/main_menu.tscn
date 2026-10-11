@@ -11,7 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://40o65rc6f8t5" path="res://Assets/Menu/icons/gamepad-2.png" id="6_t1dhk"]
 [ext_resource type="Texture2D" uid="uid://beoe1ory5m6ps" path="res://Assets/Menu/icons/circle-check-big.png" id="7_5egv6"]
 [ext_resource type="Texture2D" uid="uid://pts3jxcvstkc" path="res://Assets/Menu/icons/log-out.png" id="8_vtepg"]
+[ext_resource type="Texture2D" uid="uid://cq2ofv0cqk6m4" path="res://Assets/Menu/icons/check.png" id="11_5egv6"]
 [ext_resource type="Texture2D" uid="uid://c35p2m4b2k4ee" path="res://Assets/Menu/icons/arrow-down.png" id="11_vr1f0"]
+[ext_resource type="Texture2D" uid="uid://d1l3y4b4cqh8q" path="res://Assets/Menu/icons/arrow-up.png" id="13_8dnnj"]
+[ext_resource type="Texture2D" uid="uid://6vgs2ncfi6ep" path="res://Assets/Menu/icons/x.png" id="13_vtepg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_48xlc")
@@ -160,6 +163,70 @@ tracks/4/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_m3bi6"]
+resource_name = "FoldAnimation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Expand Panel/ExpandLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Expand Panel/ExpandTitle:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Expand Panel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Expand Panel:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(634, 179), Vector2(634, 179)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Expand Panel:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(446, 438), Vector2(446, 22)]
+}
+
 [sub_resource type="Animation" id="Animation_16hvj"]
 resource_name = "Main menu"
 length = 4.0
@@ -274,7 +341,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Buttons/ExitButton:modulate")
+tracks/9/path = NodePath("Buttons/LeaveButton:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -622,7 +689,7 @@ tracks/37/keys = {
 tracks/38/type = "value"
 tracks/38/imported = false
 tracks/38/enabled = true
-tracks/38/path = NodePath("Buttons/ExitButton:position")
+tracks/38/path = NodePath("Buttons/LeaveButton:position")
 tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/keys = {
@@ -630,6 +697,106 @@ tracks/38/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(126, 540), Vector2(126, 516)]
+}
+
+[sub_resource type="Animation" id="Animation_5egv6"]
+resource_name = "QuitPopup"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeavePopup:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(69, 50), Vector2(436, 291)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeavePopup:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(552, 588), Vector2(372, 190)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LeavePopup:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeavePopup/LeaveLabel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LeavePopup/LeaveConfirmationLabel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LeavePopup/NoButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.8, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LeaveFade:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.74509805)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("LeavePopup/YesButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_vr1f0"]
@@ -745,7 +912,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Buttons/ExitButton:modulate")
+tracks/9/path = NodePath("Buttons/LeaveButton:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1093,7 +1260,7 @@ tracks/37/keys = {
 tracks/38/type = "value"
 tracks/38/imported = false
 tracks/38/enabled = true
-tracks/38/path = NodePath("Buttons/ExitButton:position")
+tracks/38/path = NodePath("Buttons/LeaveButton:position")
 tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/keys = {
@@ -1162,13 +1329,115 @@ tracks/43/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("LeavePopup:size")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(69, 50)]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("LeavePopup:position")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(552, 588)]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("LeavePopup:modulate")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("LeavePopup/LeaveLabel:modulate")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("LeavePopup/LeaveConfirmationLabel:modulate")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("LeavePopup/NoButton:modulate")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("LeaveFade:color")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("LeavePopup/YesButton:modulate")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t1dhk"]
 _data = {
 &"Expand animation": SubResource("Animation_t1dhk"),
+&"FoldAnimation": SubResource("Animation_m3bi6"),
 &"Main menu": SubResource("Animation_16hvj"),
+&"QuitPopup": SubResource("Animation_5egv6"),
 &"RESET": SubResource("Animation_vr1f0")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5egv6"]
+atlas = ExtResource("13_vtepg")
+region = Rect2(2, -5.3, 30.802, 33.355)
 
 [node name="Main menu" type="Control" unique_id=1571781617]
 layout_mode = 3
@@ -1178,6 +1447,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t1dhk")
+
+[node name="LeaveFade" type="ColorRect" parent="." unique_id=814070053]
+visible = false
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
 
 [node name="TextureRect-Background" type="TextureRect" parent="." unique_id=1529889168]
 texture_filter = 1
@@ -1422,7 +1703,7 @@ text = "CREDITS"
 icon = SubResource("AtlasTexture_t1dhk")
 icon_alignment = 2
 
-[node name="ExitButton" type="Button" parent="Buttons" unique_id=355757246]
+[node name="LeaveButton" type="Button" parent="Buttons" unique_id=355757246]
 modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 anchors_preset = 10
@@ -1443,7 +1724,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
-text = "EXIT"
+text = "LEAVE"
 icon = SubResource("AtlasTexture_yhxw7")
 icon_alignment = 2
 
@@ -1451,9 +1732,9 @@ icon_alignment = 2
 texture_filter = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 827.0
+offset_left = 795.0
 offset_top = 115.0
-offset_right = -264.0
+offset_right = -296.0
 offset_bottom = 165.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -1468,6 +1749,30 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
 icon = ExtResource("11_vr1f0")
+icon_alignment = 1
+expand_icon = true
+
+[node name="FoldButton" type="Button" parent="Buttons" unique_id=1057145289]
+texture_filter = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 865.0
+offset_top = 115.0
+offset_right = -226.0
+offset_bottom = 165.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_n45e2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+icon = ExtResource("13_8dnnj")
 icon_alignment = 1
 expand_icon = true
 
@@ -1567,6 +1872,7 @@ vertical_alignment = 1
 [node name="DarkStart" type="ColorRect" parent="." unique_id=773891516]
 visible = false
 z_index = 1
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1579,4 +1885,126 @@ color = Color(0, 0, 0, 1)
 libraries/ = SubResource("AnimationLibrary_t1dhk")
 autoplay = &"Main menu"
 
+[node name="LeavePopup" type="Panel" parent="." unique_id=1846378157]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 3
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 552.0
+offset_top = 588.0
+offset_right = -531.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="NoButton" type="Button" parent="LeavePopup" unique_id=42013986]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 231.0
+offset_top = 156.0
+offset_right = -68.0
+offset_bottom = 229.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_n45e2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+text = "NO"
+icon = SubResource("AtlasTexture_5egv6")
+icon_alignment = 2
+
+[node name="YesButton" type="Button" parent="LeavePopup" unique_id=1668682113]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 62.0
+offset_top = 156.0
+offset_right = -237.0
+offset_bottom = 229.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_n45e2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+text = "YES"
+icon = ExtResource("11_5egv6")
+icon_alignment = 2
+
+[node name="LeaveLabel" type="Label" parent="LeavePopup" unique_id=1348458867]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 9.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_opfnp")
+theme_override_font_sizes/font_size = 28
+text = "LEAVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeaveConfirmationLabel" type="Label" parent="LeavePopup" unique_id=2119779917]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 50.0
+offset_bottom = 86.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_opfnp")
+theme_override_font_sizes/font_size = 20
+text = "Are You Sure You want to leave ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Buttons/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Buttons/LeaveButton" to="." method="_on_leave_button_pressed"]
 [connection signal="pressed" from="Buttons/ExpandButton" to="." method="_on_expand_button_pressed"]
+[connection signal="pressed" from="Buttons/FoldButton" to="." method="_on_fold_button_pressed"]
+[connection signal="pressed" from="LeavePopup/NoButton" to="." method="_on_no_button_pressed"]
+[connection signal="pressed" from="LeavePopup/YesButton" to="." method="_on_yes_button_pressed"]
