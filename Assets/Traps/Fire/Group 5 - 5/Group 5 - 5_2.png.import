@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5skqgwl5oxlk"
-path="res://.godot/imported/On (16x32).png-5ea33303c87c186fa497441c899eade9.ctex"
+uid="uid://nxsof2rjls3i"
+path="res://.godot/imported/Group 5 - 5_2.png-a77890870c2162693a0df577c9f33571.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Traps/Fire/On (16x32).png"
-dest_files=["res://.godot/imported/On (16x32).png-5ea33303c87c186fa497441c899eade9.ctex"]
+source_file="res://Assets/Traps/Fire/Group 5 - 5/Group 5 - 5_2.png"
+dest_files=["res://.godot/imported/Group 5 - 5_2.png-a77890870c2162693a0df577c9f33571.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwoovmorud4rc"
-path="res://.godot/imported/Hit (16x32).png-2b7de467536441ca87cad89f0458a8e2.ctex"
+uid="uid://cvtj2ifndfqn0"
+path="res://.godot/imported/Group 4 - 1_6.png-a47f1866e203b64f322c765bfd21d2a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Traps/Fire/Hit (16x32).png"
-dest_files=["res://.godot/imported/Hit (16x32).png-2b7de467536441ca87cad89f0458a8e2.ctex"]
+source_file="res://Assets/Traps/Fire/Group 4 - 1/Group 4 - 1_6.png"
+dest_files=["res://.godot/imported/Group 4 - 1_6.png-a47f1866e203b64f322c765bfd21d2a3.ctex"]
 
 [params]
 
