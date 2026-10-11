@@ -1,0 +1,320 @@
+[gd_scene format=3 uid="uid://cmt55jreq7wlj"]
+
+[ext_resource type="Script" uid="uid://hhvyw4gokwiw" path="res://Scripts/credits.gd" id="1_1bamb"]
+[ext_resource type="Shader" uid="uid://byfiyj13jd5sb" path="res://Scripts/credits.gdshader" id="2_803yc"]
+[ext_resource type="Texture2D" uid="uid://bbvi51e7bjs62" path="res://Assets/Background/background image.jpeg" id="3_1wbrc"]
+[ext_resource type="FontFile" uid="uid://ct0o5stc5xr03" path="res://Assets/Orbitron font/Orbitron-Bold.ttf" id="4_j6nef"]
+[ext_resource type="Texture2D" uid="uid://ci05ski6stqhu" path="res://Assets/Main Character/Ninja Frog/Jump (32x32).png" id="5_fdv4u"]
+[ext_resource type="FontFile" uid="uid://dpgb60eleu7nl" path="res://Assets/Orbitron font/Orbitron-SemiBold.ttf" id="6_ae0tj"]
+[ext_resource type="Texture2D" uid="uid://pts3jxcvstkc" path="res://Assets/Menu/icons/log-out.png" id="8_0oi4c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
+shader = ExtResource("2_803yc")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0.0627451, 0.050980393, 0.07058824, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 0.41960785, 0.101960786, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(1.1291975, 0.226826, 0.12558433, 0.6)
+shadow_size = 12
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kuey"]
+bg_color = Color(0.23137255, 0.101960786, 0.13333334, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.41960785, 0.101960786, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(0.41960785, 0.14117648, 0.23137255, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 0.76862746, 0.101960786, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ralei"]
+bg_color = Color(0.29411766, 0.12156863, 0.18039216, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 0.54509807, 0.101960786, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Credits" type="Control" unique_id=1094596324]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1bamb")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1512394331]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1991879504]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_al4r6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_1wbrc")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1114361669]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+
+[node name="Panel" type="Panel" parent="." unique_id=2129953721]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 52.0
+offset_right = 383.0
+offset_bottom = 600.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="Label3" type="Label" parent="Panel" unique_id=805839479]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 33.0
+offset_right = -10.0
+offset_bottom = 157.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_j6nef")
+theme_override_font_sizes/font_size = 24
+text = "UI IS MADE BY:
+NOUR TAMER"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="Panel" unique_id=1751542336]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 205.0
+offset_right = -10.0
+offset_bottom = 329.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_j6nef")
+theme_override_font_sizes/font_size = 24
+text = "GAME'S CORE IS MADE BY:
+ALI YAHIA"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="Panel" unique_id=1345303939]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 378.0
+offset_right = -10.0
+offset_bottom = 504.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_j6nef")
+theme_override_font_sizes/font_size = 24
+text = "ART & MUSIC IS MADE BY:
+ALI YAHIA & NOUR TAMER"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Panel" unique_id=1473673412]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 157.0
+offset_right = 316.0
+offset_bottom = 159.0
+
+[node name="ColorRect2" type="ColorRect" parent="Panel" unique_id=603148738]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 344.0
+offset_right = 316.0
+offset_bottom = 346.0
+
+[node name="Panel2" type="Panel" parent="." unique_id=998861524]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 52.0
+offset_right = 1103.0
+offset_bottom = 600.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="TextureRect" type="TextureRect" parent="Panel2" unique_id=1763937062]
+texture_filter = 1
+layout_mode = 0
+offset_right = 333.0
+offset_bottom = 369.0
+texture = ExtResource("5_fdv4u")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1923250976]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 403.0
+offset_right = 333.0
+offset_bottom = 527.0
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_j6nef")
+theme_override_font_sizes/font_size = 24
+text = "THE MAIN CHARACTER OF THE GAME \"NINJA FROG\""
+autowrap_mode = 3
+
+[node name="Panel3" type="Panel" parent="." unique_id=1790143923]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 98.0
+offset_right = 746.0
+offset_bottom = 258.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="Label2" type="Label" parent="Panel3" unique_id=1242903388]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = -11.0
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_j6nef")
+theme_override_font_sizes/font_size = 24
+text = "THANKS FOR EVERYONE SUPPORTED THIS PROJECT."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=2081031115]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_j6nef")
+theme_override_font_sizes/font_size = 35
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttonrdb2" type="Button" parent="." unique_id=189466246]
+texture_filter = 1
+layout_mode = 0
+offset_left = 542.0
+offset_top = 415.0
+offset_right = 598.0
+offset_bottom = 471.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_ae0tj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+icon = ExtResource("8_0oi4c")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Buttonrdb2" to="." method="_on_buttonrdb_2_pressed"]
