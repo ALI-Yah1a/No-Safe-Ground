@@ -1,0 +1,945 @@
+[gd_scene format=3 uid="uid://bgjacmcpqvrq7"]
+
+[ext_resource type="Shader" uid="uid://dsdd2xv03mont" path="res://Scripts/Background.gdshader" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://bbvi51e7bjs62" path="res://Assets/Background/background image.jpeg" id="2_16hvj"]
+[ext_resource type="Shader" uid="uid://s5dr8k1hxona" path="res://Scripts/Game title.gdshader" id="3_n45e2"]
+[ext_resource type="Texture2D" uid="uid://bbd0flagdp8my" path="res://Assets/Menu/icons/play.png" id="4_16hvj"]
+[ext_resource type="FontFile" uid="uid://ct0o5stc5xr03" path="res://Assets/Orbitron font/Orbitron-Bold.ttf" id="4_opfnp"]
+[ext_resource type="FontFile" uid="uid://dpgb60eleu7nl" path="res://Assets/Orbitron font/Orbitron-SemiBold.ttf" id="5_n45e2"]
+[ext_resource type="Texture2D" uid="uid://moc1ngy55yg" path="res://Assets/Menu/icons/settings.png" id="5_vr1f0"]
+[ext_resource type="Texture2D" uid="uid://40o65rc6f8t5" path="res://Assets/Menu/icons/gamepad-2.png" id="6_t1dhk"]
+[ext_resource type="Texture2D" uid="uid://beoe1ory5m6ps" path="res://Assets/Menu/icons/circle-check-big.png" id="7_5egv6"]
+[ext_resource type="Texture2D" uid="uid://pts3jxcvstkc" path="res://Assets/Menu/icons/log-out.png" id="8_vtepg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
+shader = ExtResource("1_48xlc")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0.105882354, 0.039215688, 0.05882353, 0.74509805)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 0.41960785, 0.101960786, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(1.1291975, 0.226826, 0.12558433, 0.6)
+shadow_size = 12
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5kuey"]
+shader = ExtResource("3_n45e2")
+shader_parameter/hot_color = Color(1, 0.32, 0.08, 1)
+shader_parameter/intensity = 0.18
+shader_parameter/flicker_speed = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kuey"]
+bg_color = Color(0.23137255, 0.101960786, 0.13333334, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.41960785, 0.101960786, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(0.41960785, 0.14117648, 0.23137255, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 0.76862746, 0.101960786, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ralei"]
+bg_color = Color(0.29411766, 0.12156863, 0.18039216, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 0.54509807, 0.101960786, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp0ys"]
+atlas = ExtResource("4_16hvj")
+region = Rect2(2, -5.3, 30.802, 33.355)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n45e2"]
+atlas = ExtResource("5_vr1f0")
+region = Rect2(2, -5.3, 30.802, 33.355)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr1f0"]
+atlas = ExtResource("6_t1dhk")
+region = Rect2(-0.19752502, -5.3, 32.999527, 33.355)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1dhk"]
+atlas = ExtResource("7_5egv6")
+region = Rect2(0.121665955, -5.3, 32.680336, 33.355)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhxw7"]
+atlas = ExtResource("8_vtepg")
+region = Rect2(2, -5.3, 30.802, 33.355)
+
+[sub_resource type="Animation" id="Animation_16hvj"]
+resource_name = "Main menu"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarkStart:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main menu panel title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main menu panel title:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(386.5, 22), Vector2(386.5, 9)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main menu panel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Game title:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Buttons/StartButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Buttons/SettingsButton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Buttons/GuideButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.8, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Buttons/CreditsButton:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Buttons/ExitButton:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(2.2, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("texture decorations/ColorRect:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("texture decorations/ColorRect2:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(2.6, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("texture decorations/ColorRect8:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(2.8, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("texture decorations/ColorRect3:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(3, 3.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("texture decorations/ColorRect4:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(3.2, 3.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("texture decorations/ColorRect5:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(3.4, 3.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("texture decorations/ColorRect6:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(3.6, 3.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("texture decorations/ColorRect7:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(3.8, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("texture decorations/ColorRect:size")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 171), Vector2(1, 375)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("texture decorations/ColorRect:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(400, 293), Vector2(400, 193)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("texture decorations/ColorRect2:size")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(2.6, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 186), Vector2(1, 375)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("texture decorations/ColorRect2:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(2.6, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(92, 286), Vector2(92, 193)]
+}
+
+[sub_resource type="Animation" id="Animation_vr1f0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarkStart:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main menu panel title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main menu panel title:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(386.5, 22)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main menu panel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Game title:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Buttons/StartButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Buttons/SettingsButton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Buttons/GuideButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Buttons/CreditsButton:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Buttons/ExitButton:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("texture decorations/ColorRect:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("texture decorations/ColorRect2:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("texture decorations/ColorRect8:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("texture decorations/ColorRect3:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("texture decorations/ColorRect4:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("texture decorations/ColorRect5:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("texture decorations/ColorRect6:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("texture decorations/ColorRect7:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("texture decorations/ColorRect:size")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 171)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("texture decorations/ColorRect:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 293)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("texture decorations/ColorRect2:size")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 186)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("texture decorations/ColorRect2:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(92, 286)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t1dhk"]
+_data = {
+&"Main menu": SubResource("Animation_16hvj"),
+&"RESET": SubResource("Animation_vr1f0")
+}
+
+[node name="Main menu" type="Control" unique_id=1571781617]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect-Background" type="TextureRect" parent="." unique_id=1529889168]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_al4r6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_16hvj")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=642908929]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07058824, 0.019607844, 0.039215688, 0.627451)
+
+[node name="Main menu panel" type="Panel" parent="." unique_id=1901507621]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.0
+offset_top = 79.0
+offset_right = -714.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="Main menu panel title" type="Label" parent="." unique_id=116560267]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+material = SubResource("ShaderMaterial_5kuey")
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -189.5
+offset_top = 22.0
+offset_right = 189.5
+offset_bottom = 67.00001
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_opfnp")
+theme_override_font_sizes/font_size = 35
+text = "NO-SAFE-GROUND"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="Node" parent="." unique_id=480522444]
+
+[node name="StartButton" type="Button" parent="Buttons" unique_id=1907072261]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 126.0
+offset_top = 182.0
+offset_right = -786.0
+offset_bottom = 255.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_n45e2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+text = "START"
+icon = SubResource("AtlasTexture_cp0ys")
+icon_alignment = 2
+
+[node name="SettingsButton" type="Button" parent="Buttons" unique_id=1371598760]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 126.0
+offset_top = 265.0
+offset_right = -786.0
+offset_bottom = 338.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_n45e2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+text = "SETTINGS"
+icon = SubResource("AtlasTexture_n45e2")
+icon_alignment = 2
+
+[node name="GuideButton" type="Button" parent="Buttons" unique_id=1886400905]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 126.0
+offset_top = 348.0
+offset_right = -786.0
+offset_bottom = 421.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_n45e2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+text = "GUIDE"
+icon = SubResource("AtlasTexture_vr1f0")
+icon_alignment = 2
+
+[node name="CreditsButton" type="Button" parent="Buttons" unique_id=145305836]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 126.0
+offset_top = 431.0
+offset_right = -786.0
+offset_bottom = 504.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_n45e2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+text = "CREDITS"
+icon = SubResource("AtlasTexture_t1dhk")
+icon_alignment = 2
+
+[node name="ExitButton" type="Button" parent="Buttons" unique_id=355757246]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 126.0
+offset_top = 516.0
+offset_right = -786.0
+offset_bottom = 589.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_n45e2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+text = "EXIT"
+icon = SubResource("AtlasTexture_yhxw7")
+icon_alignment = 2
+
+[node name="texture decorations" type="Node" parent="." unique_id=1820694298]
+
+[node name="ColorRect" type="ColorRect" parent="texture decorations" unique_id=770047100]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 400.0
+offset_top = 293.0
+offset_right = 401.0
+offset_bottom = 464.0
+
+[node name="ColorRect2" type="ColorRect" parent="texture decorations" unique_id=1797605212]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 92.0
+offset_top = 286.0
+offset_right = 93.0
+offset_bottom = 472.0
+
+[node name="ColorRect3" type="ColorRect" parent="texture decorations" unique_id=85659983]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 159.0
+offset_top = 258.0
+offset_right = 328.0
+offset_bottom = 260.0
+
+[node name="ColorRect4" type="ColorRect" parent="texture decorations" unique_id=1954920063]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 159.0
+offset_top = 342.0
+offset_right = 328.0
+offset_bottom = 344.0
+
+[node name="ColorRect5" type="ColorRect" parent="texture decorations" unique_id=1289649074]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 159.0
+offset_top = 424.0
+offset_right = 328.0
+offset_bottom = 426.0
+
+[node name="ColorRect6" type="ColorRect" parent="texture decorations" unique_id=2030058527]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 159.0
+offset_top = 508.0
+offset_right = 328.0
+offset_bottom = 510.0
+
+[node name="ColorRect7" type="ColorRect" parent="texture decorations" unique_id=1344821431]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 159.0
+offset_top = 596.0
+offset_right = 328.0
+offset_bottom = 598.0
+
+[node name="ColorRect8" type="ColorRect" parent="texture decorations" unique_id=540512736]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 159.0
+offset_top = 172.0
+offset_right = 328.0
+offset_bottom = 174.0
+
+[node name="Game title" type="Label" parent="." unique_id=723109560]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+material = SubResource("ShaderMaterial_5kuey")
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 76.0
+offset_top = 117.0
+offset_right = -738.0
+offset_bottom = 153.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("4_opfnp")
+theme_override_font_sizes/font_size = 28
+text = "SELECT DESTINY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DarkStart" type="ColorRect" parent="." unique_id=773891516]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=705449511]
+libraries/ = SubResource("AnimationLibrary_t1dhk")
+autoplay = &"Main menu"
