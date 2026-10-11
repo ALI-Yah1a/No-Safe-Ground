@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bpfutwfotn7pe"]
 
+[ext_resource type="Script" uid="uid://dbqtgge8l8rtf" path="res://Scripts/levels.gd" id="1_p1uqq"]
 [ext_resource type="Shader" uid="uid://cuayleefawp71" path="res://Scripts/levels.gdshader" id="1_xgx5e"]
 [ext_resource type="Texture2D" uid="uid://bbvi51e7bjs62" path="res://Assets/Background/background image.jpeg" id="2_uusmb"]
 [ext_resource type="FontFile" uid="uid://ct0o5stc5xr03" path="res://Assets/Orbitron font/Orbitron-Bold.ttf" id="3_3akqy"]
 [ext_resource type="FontFile" uid="uid://dpgb60eleu7nl" path="res://Assets/Orbitron font/Orbitron-SemiBold.ttf" id="4_jk88k"]
 [ext_resource type="Texture2D" uid="uid://cnmo8rbgpo8uf" path="res://Assets/Menu/icons/sparkles.png" id="5_jk88k"]
+[ext_resource type="Texture2D" uid="uid://dagp8owu2ipvt" path="res://Assets/Menu/icons/arrow-big-left.png" id="7_j0k6p"]
+[ext_resource type="Texture2D" uid="uid://cwfvrmusqq616" path="res://Assets/Menu/icons/flame.png" id="8_j0k6p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_xgx5e")
@@ -50,6 +53,9 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_al4r6"]
 atlas = ExtResource("5_jk88k")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ralei"]
+atlas = ExtResource("7_j0k6p")
 
 [sub_resource type="Animation" id="Animation_uotyi"]
 resource_name = "Levels'animation"
@@ -306,6 +312,202 @@ tracks/20/keys = {
 "update": 0,
 "values": [Vector2(136, 525), Vector2(556, 525)]
 }
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("TextureDecorations/ColorRect:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("TextureDecorations/ColorRect3:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("TextureDecorations/ColorRect2:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("TextureDecorations/ColorRect4:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(1.5, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("TextureDecorations/ColorRect5:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(2, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("TextureDecorations/ColorRect7:modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("TextureDecorations/ColorRect8:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(3, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("TextureDecorations/ColorRect9:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(3.5, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("levels\'buttons/Level1Button:modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(4, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("levels\'buttons/Level2Button:modulate")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(4.5, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("levels\'buttons/Level3Button:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(5, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("levels\'buttons/Level4Button:modulate")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(5.5, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("levels\'buttons/Level5Button:modulate")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(6, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bku7o"]
+resource_name = "Levels'entry"
+length = 0.39999999999999997
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("levels\'buttons/Start Animation Button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LevelsLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_p1uqq"]
 length = 0.001
@@ -561,12 +763,224 @@ tracks/20/keys = {
 "update": 0,
 "values": [Vector2(136, 525)]
 }
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("TextureDecorations/ColorRect:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("TextureDecorations/ColorRect3:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("TextureDecorations/ColorRect2:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("TextureDecorations/ColorRect4:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("TextureDecorations/ColorRect5:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("TextureDecorations/ColorRect7:modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("TextureDecorations/ColorRect8:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("TextureDecorations/ColorRect9:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("levels\'buttons/Level1Button:modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("levels\'buttons/Level2Button:modulate")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("levels\'buttons/Level3Button:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("levels\'buttons/Level4Button:modulate")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("levels\'buttons/Level5Button:modulate")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("levels\'buttons/Start Animation Button:modulate")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("LevelsLabel:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("ColorRect:color")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j0k6p"]
 _data = {
 &"Levels\'animation": SubResource("Animation_uotyi"),
+&"Levels\'entry": SubResource("Animation_bku7o"),
 &"RESET": SubResource("Animation_p1uqq")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0.105882354, 0.039215688, 0.05882353, 0.74509805)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 0.41960785, 0.101960786, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(1.1291975, 0.226826, 0.12558433, 0.6)
+shadow_size = 12
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6uar"]
+atlas = ExtResource("8_j0k6p")
+region = Rect2(-0.100048065, -0.15363026, 24.199177, 24.153042)
 
 [node name="Levels" type="Control" unique_id=416938505]
 layout_mode = 3
@@ -575,6 +989,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_p1uqq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=18005170]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2002647606]
 texture_filter = 1
@@ -599,6 +1024,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="LevelsLabel" type="Label" parent="." unique_id=43069518]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -622,6 +1048,7 @@ vertical_alignment = 1
 [node name="levels\'buttons" type="Node" parent="." unique_id=394567372]
 
 [node name="Level1Button" type="Button" parent="levels\'buttons" unique_id=389884742]
+modulate = Color(1, 1, 1, 0)
 offset_left = 136.0
 offset_top = 86.0
 offset_right = 352.0
@@ -640,9 +1067,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
 text = "1st LEVEL"
 
 [node name="Level2Button" type="Button" parent="levels\'buttons" unique_id=881344028]
+modulate = Color(1, 1, 1, 0)
 offset_left = 136.0
 offset_top = 196.0
-offset_right = 352.0
+offset_right = 351.99994
 offset_bottom = 284.0
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
@@ -658,9 +1086,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
 text = "2nd LEVEL"
 
 [node name="Level3Button" type="Button" parent="levels\'buttons" unique_id=1367773854]
+modulate = Color(1, 1, 1, 0)
 offset_left = 136.0
 offset_top = 306.0
-offset_right = 352.0
+offset_right = 352.00012
 offset_bottom = 394.0
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
@@ -676,6 +1105,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
 text = "3rd LEVEL"
 
 [node name="Level4Button" type="Button" parent="levels\'buttons" unique_id=598300135]
+modulate = Color(1, 1, 1, 0)
 offset_left = 136.0
 offset_top = 415.0
 offset_right = 352.0
@@ -694,9 +1124,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
 text = "4th LEVEL"
 
 [node name="Level5Button" type="Button" parent="levels\'buttons" unique_id=864353346]
+modulate = Color(1, 1, 1, 0)
 offset_left = 136.0
 offset_top = 525.0
-offset_right = 352.0
+offset_right = 352.00006
 offset_bottom = 613.0
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
@@ -712,6 +1143,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
 text = "5th LEVEL"
 
 [node name="Start Animation Button" type="Button" parent="levels\'buttons" unique_id=2039951084]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 offset_left = 26.0
 offset_top = 318.0
@@ -732,51 +1164,80 @@ icon = SubResource("AtlasTexture_al4r6")
 icon_alignment = 1
 expand_icon = true
 
+[node name="Return to main Button" type="Button" parent="levels\'buttons" unique_id=2088368235]
+texture_filter = 1
+offset_left = 1065.0
+offset_top = 318.0
+offset_right = 1121.0
+offset_bottom = 374.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_jk88k")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+icon = SubResource("AtlasTexture_ralei")
+icon_alignment = 1
+expand_icon = true
+
 [node name="TextureDecorations" type="Node" parent="." unique_id=1857954631]
 
 [node name="ColorRect" type="ColorRect" parent="TextureDecorations" unique_id=2054776784]
+modulate = Color(1, 1, 1, 0)
 offset_left = 120.0
 offset_top = 554.0
 offset_right = 121.0
 offset_bottom = 619.0
 
 [node name="ColorRect2" type="ColorRect" parent="TextureDecorations" unique_id=1031995717]
+modulate = Color(1, 1, 1, 0)
 offset_left = 1032.0
 offset_top = 79.0
 offset_right = 1033.0
 offset_bottom = 145.0
 
 [node name="ColorRect3" type="ColorRect" parent="TextureDecorations" unique_id=551865323]
+modulate = Color(1, 1, 1, 0)
 offset_left = 122.0
 offset_top = 70.0
 offset_right = 246.0
 offset_bottom = 71.0
 
 [node name="ColorRect4" type="ColorRect" parent="TextureDecorations" unique_id=1929898846]
+modulate = Color(1, 1, 1, 0)
 offset_left = 942.0
 offset_top = 628.0
 offset_right = 1031.0
 offset_bottom = 629.0
 
 [node name="ColorRect5" type="ColorRect" parent="TextureDecorations" unique_id=947800357]
+modulate = Color(1, 1, 1, 0)
 offset_left = 148.0
 offset_top = 513.0
 offset_right = 261.0
 offset_bottom = 514.0
 
 [node name="ColorRect7" type="ColorRect" parent="TextureDecorations" unique_id=1345470487]
+modulate = Color(1, 1, 1, 0)
 offset_left = 148.0
 offset_top = 404.0
 offset_right = 231.0
 offset_bottom = 405.0
 
 [node name="ColorRect8" type="ColorRect" parent="TextureDecorations" unique_id=284722983]
+modulate = Color(1, 1, 1, 0)
 offset_left = 148.0
 offset_top = 294.0
 offset_right = 249.0
 offset_bottom = 295.0
 
 [node name="ColorRect9" type="ColorRect" parent="TextureDecorations" unique_id=2041563332]
+modulate = Color(1, 1, 1, 0)
 offset_left = 148.0
 offset_top = 184.0
 offset_right = 236.0
@@ -784,4 +1245,108 @@ offset_bottom = 185.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=912716267]
 libraries/ = SubResource("AnimationLibrary_j0k6p")
-autoplay = &"Levels\'animation"
+autoplay = &"Levels\'entry"
+
+[node name="Popups" type="Node" parent="." unique_id=1574225332]
+
+[node name="Level1Popup" type="Panel" parent="Popups" unique_id=305329923]
+offset_left = 376.0
+offset_top = 189.0
+offset_right = 764.0
+offset_bottom = 477.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="Level1Name" type="Label" parent="Popups/Level1Popup" unique_id=515390353]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("3_3akqy")
+theme_override_font_sizes/font_size = 20
+text = "ASHES OF THE FALLEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level1Difficulty" type="Label" parent="Popups/Level1Popup" unique_id=407208251]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 58.0
+offset_right = -229.0
+offset_bottom = 114.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019608, 0.9019608, 0.9019608, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.23137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("3_3akqy")
+theme_override_font_sizes/font_size = 20
+text = "DIFFICULTY:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="flames1" type="Node" parent="Popups/Level1Popup" unique_id=216646354]
+
+[node name="Flame1Button1" type="Button" parent="Popups/Level1Popup/flames1" unique_id=292731849]
+texture_filter = 1
+offset_left = 601.0
+offset_top = 254.0
+offset_right = 688.0
+offset_bottom = 304.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_jk88k")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+icon = SubResource("AtlasTexture_b6uar")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Enter1Button" type="Button" parent="Popups/Level1Popup" unique_id=873928409]
+texture_filter = 1
+layout_mode = 0
+offset_left = 92.0
+offset_top = 164.0
+offset_right = 127.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.7294118, 0.12156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0.7019608, 0.2784314, 1)
+theme_override_colors/font_disabled_color = Color(0.53333336, 0.22745098, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0.79895484, 0.9727873, 3.080368e-06, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_jk88k")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kuey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ralei")
+text = "ENTER"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="levels\'buttons/Start Animation Button" to="." method="_on_start_animation_button_pressed"]
+[connection signal="pressed" from="levels\'buttons/Return to main Button" to="." method="_on_return_to_main_button_pressed"]

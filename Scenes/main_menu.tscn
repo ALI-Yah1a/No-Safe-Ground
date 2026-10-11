@@ -698,6 +698,30 @@ tracks/38/keys = {
 "update": 0,
 "values": [Vector2(126, 540), Vector2(126, 516)]
 }
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Buttons/ExpandButton:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(1.4, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Buttons/FoldButton:modulate")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(1.4, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_5egv6"]
 resource_name = "QuitPopup"
@@ -1425,6 +1449,30 @@ tracks/51/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("Buttons/ExpandButton:modulate")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("Buttons/FoldButton:modulate")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t1dhk"]
 _data = {
@@ -1729,6 +1777,7 @@ icon = SubResource("AtlasTexture_yhxw7")
 icon_alignment = 2
 
 [node name="ExpandButton" type="Button" parent="Buttons" unique_id=518382252]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -1753,6 +1802,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="FoldButton" type="Button" parent="Buttons" unique_id=1057145289]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 anchors_preset = 10
 anchor_right = 1.0
