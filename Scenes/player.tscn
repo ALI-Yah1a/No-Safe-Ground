@@ -422,11 +422,12 @@ radius = 11.0
 height = 24.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1987827885]
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_f1ek2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=175099084]
 sprite_frames = SubResource("SpriteFrames_t76eq")
-animation = &"double_jump"
+animation = &"hit"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=372768820]

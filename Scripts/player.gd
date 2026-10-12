@@ -2,8 +2,8 @@ extends CharacterBody2D
 class_name Player
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-const SPEED = 200.0
-const JUMP_VELOCITY = -350.0
+const SPEED = 220.0
+const JUMP_VELOCITY = -320.0
 var is_hurt = false
 var max_health = 4
 var current_health = 4
@@ -20,8 +20,6 @@ func _ready():
 func _input(event):
 	if is_hurt or is_appearing:
 		return
-	if event is InputEventKey and event.pressed and event.keycode == KEY_T:
-		take_damage(1)
 	if event.is_action_pressed("jump"):
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
