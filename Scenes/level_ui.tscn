@@ -1,0 +1,254 @@
+[gd_scene format=3 uid="uid://b3nju3r120rrt"]
+
+[ext_resource type="Texture2D" uid="uid://vlr1tqk2y1gx" path="res://Assets/Menu/1-Hearth_Bar_Outline.png" id="1_2qe5m"]
+[ext_resource type="Script" uid="uid://du0qisatwwo7h" path="res://Scripts/level_ui.gd" id="1_ai2e2"]
+[ext_resource type="Texture2D" uid="uid://b6sa872mwah0y" path="res://Assets/Menu/1-Hearth_Bar_Fill.png" id="2_ao4gj"]
+[ext_resource type="Texture2D" uid="uid://dpxk16x4n4dnt" path="res://Assets/Menu/freecasinoui.png" id="3_ai2e2"]
+[ext_resource type="FontFile" uid="uid://beyo5jiuhbe4l" path="res://Assets/BlackgothRegular-xRg40.otf" id="4_htk61"]
+[ext_resource type="Texture2D" uid="uid://dymx677h3t3eu" path="res://Assets/Menu/UiCozyFree.png" id="5_60vve"]
+[ext_resource type="Texture2D" uid="uid://yjsr000bd4vk" path="res://Assets/Menu/FreeDemo.png" id="6_ao4gj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52dyq"]
+atlas = ExtResource("1_2qe5m")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw16p"]
+atlas = ExtResource("2_ao4gj")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esyny"]
+atlas = ExtResource("3_ai2e2")
+region = Rect2(120, 214, 17, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t76eq"]
+atlas = ExtResource("5_60vve")
+region = Rect2(8, 167, 87, 81)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iu26y"]
+texture = ExtResource("6_ao4gj")
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+region_rect = Rect2(139, 151, 48, 16)
+modulate_color = Color(0.8741615, 0.8741615, 0.8741615, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ai2e2"]
+load_path = "res://.godot/imported/FreeDemo.png-957a4099de3a002651e0283d4bd53860.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qd36q"]
+texture = SubResource("CompressedTexture2D_ai2e2")
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+region_rect = Rect2(139, 151, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34jgd"]
+texture = ExtResource("6_ao4gj")
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+region_rect = Rect2(139, 151, 48, 16)
+modulate_color = Color(0.641934, 0.641934, 0.641934, 1)
+
+[node name="LevelUI" type="CanvasLayer" unique_id=949621728 groups=["UI"]]
+script = ExtResource("1_ai2e2")
+
+[node name="HUD" type="Control" parent="." unique_id=2079424305]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11.999999
+offset_top = 51.999996
+offset_right = 82.0
+offset_bottom = 92.0
+scale = Vector2(5, 5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD" unique_id=283758258]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="TextureProgressBar" parent="HUD/VBoxContainer" unique_id=209299294]
+layout_mode = 2
+value = 100.0
+texture_under = SubResource("AtlasTexture_52dyq")
+texture_progress = SubResource("AtlasTexture_gw16p")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/VBoxContainer" unique_id=330958971]
+layout_mode = 2
+
+[node name="PickupsIcon" type="TextureRect" parent="HUD/VBoxContainer/HBoxContainer" unique_id=1170102316]
+layout_mode = 2
+texture = SubResource("AtlasTexture_esyny")
+
+[node name="PickupsLabel" type="Label" parent="HUD/VBoxContainer/HBoxContainer" unique_id=2135675613]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_htk61")
+text = "1111"
+
+[node name="CurrentLevel" type="Label" parent="HUD/VBoxContainer" unique_id=2095308146]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.718977, 0.76481664, 0.9727631, 1)
+theme_override_fonts/font = ExtResource("4_htk61")
+text = "Level 2"
+horizontal_alignment = 1
+
+[node name="PauseMenu" type="Control" parent="." unique_id=2058676698]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1947268958]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.23529412)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PauseMenu" unique_id=214288371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_t76eq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/NinePatchRect" unique_id=2001011363]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -321.0
+offset_top = -269.0
+offset_right = 324.0
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+
+[node name="Title" type="Label" parent="PauseMenu/NinePatchRect/VBoxContainer" unique_id=538068092]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("4_htk61")
+theme_override_font_sizes/font_size = 110
+text = "No Safe Ground"
+
+[node name="ResumeButton" type="Button" parent="PauseMenu/NinePatchRect/VBoxContainer" unique_id=1394501612]
+custom_maximum_size = Vector2(-1, 150)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_htk61")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxTexture_iu26y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qd36q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_34jgd")
+text = "Resume"
+
+[node name="MainMenuButton" type="Button" parent="PauseMenu/NinePatchRect/VBoxContainer" unique_id=1451761053]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_htk61")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxTexture_iu26y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qd36q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_34jgd")
+text = "Main Menu"
+
+[node name="LevelComplete" type="Control" parent="." unique_id=1023523694]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="LevelComplete" unique_id=1898904968]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.23529412)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="LevelComplete" unique_id=1505891812]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_t76eq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelComplete/NinePatchRect" unique_id=152184097]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -321.0
+offset_top = -269.0
+offset_right = 324.0
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+
+[node name="Title" type="Label" parent="LevelComplete/NinePatchRect/VBoxContainer" unique_id=1311929120]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("4_htk61")
+theme_override_font_sizes/font_size = 150
+text = "Congrats!"
+horizontal_alignment = 1
+
+[node name="NextLevelButton" type="Button" parent="LevelComplete/NinePatchRect/VBoxContainer" unique_id=1716598362]
+custom_maximum_size = Vector2(-1, 150)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_htk61")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxTexture_iu26y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qd36q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_34jgd")
+text = "Next Level"
+
+[node name="MainMenuButton" type="Button" parent="LevelComplete/NinePatchRect/VBoxContainer" unique_id=52357166]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_htk61")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxTexture_iu26y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qd36q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_34jgd")
+text = "Main Menu"
+
+[connection signal="pressed" from="PauseMenu/NinePatchRect/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/NinePatchRect/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="LevelComplete/NinePatchRect/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="LevelComplete/NinePatchRect/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

@@ -585,7 +585,7 @@ tracks/33/keys = {
 
 [sub_resource type="Animation" id="Animation_bku7o"]
 resource_name = "Levels'entry"
-length = 0.39999999999999997
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -3463,8 +3463,11 @@ icon_alignment = 2
 [connection signal="pressed" from="levels\'buttons/Level5Button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="levels\'buttons/Start Animation Button" to="." method="_on_start_animation_button_pressed"]
 [connection signal="pressed" from="levels\'buttons/Return to main Button" to="." method="_on_return_to_main_button_pressed"]
+[connection signal="pressed" from="Popups/Level1Popup/Enter1Button" to="." method="_on_enter_1_button_pressed"]
 [connection signal="pressed" from="Popups/Level1Popup/Back1Button" to="." method="_on_back_1_button_pressed"]
+[connection signal="pressed" from="Popups/Level2Popup/Enter2Button" to="." method="_on_enter_2_button_pressed"]
 [connection signal="pressed" from="Popups/Level2Popup/Back2Button" to="." method="_on_back_2_button_pressed"]
+[connection signal="pressed" from="Popups/Level3Popup/Enter3Button" to="." method="_on_enter_3_button_pressed"]
 [connection signal="pressed" from="Popups/Level3Popup/Back3Button" to="." method="_on_back_3_button_pressed"]
 [connection signal="pressed" from="Popups/Level4Popup/Back4Button" to="." method="_on_back_4_button_pressed"]
 [connection signal="pressed" from="Popups/Level5Popup/Back5Button" to="." method="_on_back_5_button_pressed"]

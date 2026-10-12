@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cpmfjapv1bemf"]
+
+[ext_resource type="Script" uid="uid://bwrmqat1vhmd7" path="res://Scripts/fire.gd" id="1_yr3ur"]
+[ext_resource type="Texture2D" uid="uid://ced3b4qfxk3e1" path="res://Assets/Traps/Fire/Group 5 - 1/Group 5 - 1.png" id="2_idb68"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2jnl"]
+atlas = ExtResource("2_idb68")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uni6"]
+atlas = ExtResource("2_idb68")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrujk"]
+atlas = ExtResource("2_idb68")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dmct"]
+atlas = ExtResource("2_idb68")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w35r5"]
+atlas = ExtResource("2_idb68")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcnk6"]
+atlas = ExtResource("2_idb68")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h6i6"]
+atlas = ExtResource("2_idb68")
+region = Rect2(192, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdy38"]
+atlas = ExtResource("2_idb68")
+region = Rect2(224, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t76eq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2jnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uni6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrujk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dmct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w35r5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcnk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3h6i6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdy38")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6cgax"]
+height = 36.0
+
+[node name="Fire" type="Area2D" unique_id=141342122]
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_yr3ur")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=793368190]
+sprite_frames = SubResource("SpriteFrames_t76eq")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.07365122
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=754155471]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_6cgax")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
