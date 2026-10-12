@@ -45,15 +45,16 @@ expand_margin_bottom = 20.0
 region_rect = Rect2(139, 151, 48, 16)
 modulate_color = Color(0.641934, 0.641934, 0.641934, 1)
 
-[node name="LevelUI" type="CanvasLayer" unique_id=949621728]
+[node name="LevelUI" type="CanvasLayer" unique_id=949621728 groups=["UI"]]
 script = ExtResource("1_ai2e2")
 
 [node name="HUD" type="Control" parent="." unique_id=2079424305]
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 3
 anchors_preset = 0
+offset_left = 11.999999
 offset_top = 51.999996
-offset_right = 70.0
+offset_right = 82.0
 offset_bottom = 92.0
 scale = Vector2(5, 5)
 
