@@ -183,7 +183,7 @@ animations = [{
 radius = 7.0
 
 [node name="SecondPickup" type="Area2D" unique_id=267722383]
-z_index = -1
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_lmht4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1611938273]

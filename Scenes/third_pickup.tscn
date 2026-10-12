@@ -118,7 +118,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_en1sy")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"collected",
 "speed": 20.0
 }, {
@@ -183,14 +183,13 @@ animations = [{
 radius = 7.0
 
 [node name="ThirdPickup" type="Area2D" unique_id=267722383]
-z_index = -1
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_oihff")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1874107931]
 sprite_frames = SubResource("SpriteFrames_t76eq")
-animation = &"collected"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.5692576
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=122623811]
 position = Vector2(0, -1)

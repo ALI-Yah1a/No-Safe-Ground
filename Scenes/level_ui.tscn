@@ -168,6 +168,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_34jgd")
 text = "Main Menu"
 
 [node name="LevelComplete" type="Control" parent="." unique_id=1023523694]
+process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 15

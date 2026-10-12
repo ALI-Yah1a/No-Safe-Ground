@@ -183,11 +183,12 @@ animations = [{
 radius = 7.0
 
 [node name="FirstPickup" type="Area2D" unique_id=267722383]
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_b7vd8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1991229382]
 sprite_frames = SubResource("SpriteFrames_j2skn")
-animation = &"collected"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=122623811]

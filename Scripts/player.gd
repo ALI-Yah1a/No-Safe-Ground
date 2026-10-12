@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-const SPEED = 220.0
+const SPEED = 200.0
 const JUMP_VELOCITY = -320.0
 var is_hurt = false
 var max_health = 4
