@@ -10,9 +10,14 @@ config_version=5
 
 [application]
 
-config/name="No Safe Ground"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/name="No-Safe-Ground"
+run/main_scene="uid://bgjacmcpqvrq7"
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioStreamPlayerGlobal="*uid://mvgrsbb17qsf"
 
 [display]
 
@@ -65,3 +70,5 @@ pause={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
