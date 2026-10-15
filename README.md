@@ -6,6 +6,8 @@
 - This week we finished the main menu, player scene, pickups, and 3 full levels. 
 ## How To Run The Game?
 - To run the game you should open the itch.io link, then click the button "Run Game". So simple.
+- This is the link: https://ali-yah1a.itch.io/no-safe-ground
+
 ## How To Play The Game?
 - To play the game correctly, you should click the "START" button in the main menu after running the game. Then select the one of the 3 levels.
 - The only way to complete the level is by reaching the endpoint of each level. Also, it is optional to collect fruits, there is no required amount.
